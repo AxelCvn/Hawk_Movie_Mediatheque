@@ -1,0 +1,26 @@
+@(title: String)(content: Html)
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@title</title>
+  </head>
+  <body>
+    <section class="content">@content</section>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container">
+              <a class="brand" href="api/movies">Get all movies from the mediatheque</a>
+          </div>
+          <div class="container">
+              <a class="brand" href="api/moviesSorted">Get All Movies Sorted</a>
+          </div>
+          <div class="container">
+            <a class="brand" href="api/moviesPerYear">Get the count of movies per year</a>
+          </div>
+          <div class="container">
+            <a class="brand" href="api/forms">Add a movie to the mediatheque through a form</a>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>

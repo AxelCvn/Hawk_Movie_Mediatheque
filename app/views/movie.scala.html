@@ -1,0 +1,19 @@
+@import helper._
+
+@(movieForm: Form[MovieForm.MovieData])(implicit messages: Messages, messagesProvider: MessagesProvider)
+
+@myform("Movie Form") {
+    <h1>Insert A Movie Using This Form</h1>
+
+    @form(action = routes.MovieController.movieFormPost) {
+        @inputText(movieForm("title"))
+        @inputText(movieForm("country"))
+        @inputText(movieForm("year"))
+        @inputText(movieForm("original_title"))
+        @inputDate(movieForm("french_release"))
+        @inputText(movieForm("synopsis"))
+        @inputText(movieForm("genre"))
+        @inputText(movieForm("ranking"))
+        <input type="submit" value="Submit">
+    }
+}

@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# Home Page
++nocsrf
+GET     /                               @controllers.MovieController.index()
+
+
+# api controllers mapping
++nocsrf
+GET     /api/forms                      @controllers.MovieController.forms()
+GET     /api/movies                     @controllers.MovieController.getAllMovies()
+GET     /api/moviesSorted/:genre        @controllers.MovieController.getAllMoviesSortedWithGenre(genre: String)
+GET     /api/moviesSorted               @controllers.MovieController.getAllMoviesSorted()
+GET     /api/moviesSorted/              @controllers.MovieController.getAllMoviesSorted()
+GET     /api/movies/:title              @controllers.MovieController.getMovie(title: String)
+GET     /api/moviesPerYear              @controllers.MovieController.getMoviesCountPerYearService()
+
++nocsrf
+POST    /api/movie                      @controllers.MovieController.movieFormPost()
